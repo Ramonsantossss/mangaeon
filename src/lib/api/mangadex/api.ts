@@ -181,7 +181,7 @@ const getChapters = async (id: string, page: number = 0) => {
   searchParams.append('contentRating[]', 'pornographic');
 
   if (page > 1) {
-    searchParams.append('offset', (96 * (page - 1)).toString());
+    searchParams.append('offset', (500 * (page - 1)).toString());
   }
 
   const response = await fetch(url, requestOptions);
@@ -203,6 +203,10 @@ const getChapters = async (id: string, page: number = 0) => {
   };
 };
 
+        
+        
+        
+        
 const extractChapter = (chap: ChapterData) => {
   const attrs = chap.attributes;
 
